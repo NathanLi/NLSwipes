@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A2143901C3EC5E400008DB8 /* NSObject+nl_Reflectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A21438F1C3EC5E400008DB8 /* NSObject+nl_Reflectable.swift */; };
 		5A4144E11C318ACD0049B87E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4144E01C318ACD0049B87E /* AppDelegate.swift */; };
 		5A4144E31C318ACD0049B87E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4144E21C318ACD0049B87E /* ViewController.swift */; };
-		5A4144E61C318ACD0049B87E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A4144E41C318ACD0049B87E /* Main.storyboard */; };
 		5A4144E81C318ACD0049B87E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A4144E71C318ACD0049B87E /* Assets.xcassets */; };
 		5A4144EB1C318ACD0049B87E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A4144E91C318ACD0049B87E /* LaunchScreen.storyboard */; };
 		5A4144F91C318AFF0049B87E /* NLSwipesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4144F81C318AFF0049B87E /* NLSwipesTests.swift */; };
+		5A546CB71C342FD100B945F1 /* NLTagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A546CB61C342FD100B945F1 /* NLTagModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +27,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A21438F1C3EC5E400008DB8 /* NSObject+nl_Reflectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+nl_Reflectable.swift"; sourceTree = "<group>"; };
 		5A4144DD1C318ACD0049B87E /* NLSwipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NLSwipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A4144E01C318ACD0049B87E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A4144E21C318ACD0049B87E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5A4144E51C318ACD0049B87E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5A4144E71C318ACD0049B87E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A4144EA1C318ACD0049B87E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A4144EC1C318ACD0049B87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A4144F61C318AFF0049B87E /* NLSwipesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NLSwipesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A4144F81C318AFF0049B87E /* NLSwipesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLSwipesTests.swift; sourceTree = "<group>"; };
 		5A4144FA1C318AFF0049B87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A546CB61C342FD100B945F1 /* NLTagModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLTagModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A21438D1C3EC4D600008DB8 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				5A21438E1C3EC4E700008DB8 /* NSObject */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		5A21438E1C3EC4E700008DB8 /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				5A21438F1C3EC5E400008DB8 /* NSObject+nl_Reflectable.swift */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
 		5A4144D41C318ACC0049B87E = {
 			isa = PBXGroup;
 			children = (
@@ -77,9 +95,10 @@
 		5A4144DF1C318ACD0049B87E /* NLSwipes */ = {
 			isa = PBXGroup;
 			children = (
+				5A21438D1C3EC4D600008DB8 /* Categories */,
+				5A546CB51C342FA000B945F1 /* Models */,
 				5A4144E01C318ACD0049B87E /* AppDelegate.swift */,
 				5A4144E21C318ACD0049B87E /* ViewController.swift */,
-				5A4144E41C318ACD0049B87E /* Main.storyboard */,
 				5A4144E71C318ACD0049B87E /* Assets.xcassets */,
 				5A4144E91C318ACD0049B87E /* LaunchScreen.storyboard */,
 				5A4144EC1C318ACD0049B87E /* Info.plist */,
@@ -94,6 +113,14 @@
 				5A4144FA1C318AFF0049B87E /* Info.plist */,
 			);
 			path = NLSwipesTests;
+			sourceTree = "<group>";
+		};
+		5A546CB51C342FA000B945F1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5A546CB61C342FD100B945F1 /* NLTagModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,7 +206,6 @@
 			files = (
 				5A4144EB1C318ACD0049B87E /* LaunchScreen.storyboard in Resources */,
 				5A4144E81C318ACD0049B87E /* Assets.xcassets in Resources */,
-				5A4144E61C318ACD0049B87E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +224,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A4144E31C318ACD0049B87E /* ViewController.swift in Sources */,
+				5A2143901C3EC5E400008DB8 /* NSObject+nl_Reflectable.swift in Sources */,
+				5A546CB71C342FD100B945F1 /* NLTagModel.swift in Sources */,
 				5A4144E11C318ACD0049B87E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,14 +249,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5A4144E41C318ACD0049B87E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5A4144E51C318ACD0049B87E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5A4144E91C318ACD0049B87E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -388,6 +408,7 @@
 				5A4144F11C318ACD0049B87E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5A4144FD1C318AFF0049B87E /* Build configuration list for PBXNativeTarget "NLSwipesTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +417,7 @@
 				5A4144FF1C318AFF0049B87E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
