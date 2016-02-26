@@ -24,11 +24,11 @@ public extension NSObject {
   }
   
   public class func nl_propertyInfos() -> [NLPropertyInfo] {
-    var propertyInfos = self.__nl_typeVarDictionarys[self.nl_typeName()];
+    var propertyInfos = self.__nl_typePropertyDictionarys[self.nl_typeName()];
     
     if (propertyInfos == nil) {
-      propertyInfos = self.__nl_variableInfos(Mirror(reflecting:self.init()));
-      self.__nl_typeVarDictionarys[self.nl_typeName()] = propertyInfos;
+      propertyInfos = self.__nl_propertyInfos(Mirror(reflecting:self.init()));
+      self.__nl_typePropertyDictionarys[self.nl_typeName()] = propertyInfos;
     }
 
     return propertyInfos!;
@@ -50,18 +50,18 @@ public extension NSObject {
   }
   
   
-  private class func __nl_variableInfos(mirror: Mirror) -> [NLPropertyInfo] {
+  private class func __nl_propertyInfos(mirror: Mirror) -> [NLPropertyInfo] {
     var variableInfos = mirror.children.filter { $0.label != nil }.map { NLPropertyInfo($0.label!, "\($0.value.dynamicType)") }
     
     if let superMirror = mirror.superclassMirror() {
-      variableInfos.appendContentsOf(self.__nl_variableInfos(superMirror));
+      variableInfos.appendContentsOf(self.__nl_propertyInfos(superMirror));
     }
     
     return variableInfos ?? [];
   }
   
   
-  private static var __nl_typeVarDictionarys = Dictionary<String, [NLPropertyInfo]>();
+  private static var __nl_typePropertyDictionarys = Dictionary<String, [NLPropertyInfo]>();
   private static var __nl_typeNameDictionarys = Dictionary<String, [String]>();
 }
 

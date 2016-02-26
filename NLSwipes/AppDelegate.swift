@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     print(NLTagModel.nl_propertyNames());
     for name in NLTagModel.nl_propertyNames() {
-      let a: AnyClass? = NLTagModel.nl_typeWithName(name)
-      print(a)
+      let a = NLTagModel.nl_typeNameWithPropertyName(name)
+      print(a!)
     }
     return true
   }
