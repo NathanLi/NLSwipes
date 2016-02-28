@@ -8,9 +8,17 @@
 
 import Foundation
 
+/// Class property information. Include the property name and it's type name.
 public typealias NLPropertyInfo = (name: String, typeName: String)
+
+// MARK: - The property informas.
 public extension NSObject {
   
+  /**
+   Property names.
+   
+   - returns: Array include property names.
+   */
   public class func nl_propertyNames() -> [String] {
     var propertyNames = self.__nl_typeNameDictionarys[self.nl_typeName()];
     
@@ -22,6 +30,11 @@ public extension NSObject {
     return propertyNames!;
   }
   
+  /**
+   Property informations.
+   
+   - returns: Array include property informations.
+   */
   public class func nl_propertyInfos() -> [NLPropertyInfo] {
     var propertyInfos = self.__nl_typePropertyDictionarys[self.nl_typeName()];
     
@@ -33,6 +46,13 @@ public extension NSObject {
     return propertyInfos!;
   }
   
+  /**
+   Query property type name.
+   
+   - parameter name: The property name
+   
+   - returns: String? of property type name.
+   */
   public class func nl_typeNameWithPropertyName(name: String) -> String? {
     for propertyInfo in self.nl_propertyInfos() {
       if (propertyInfo.name == name) {
@@ -44,6 +64,11 @@ public extension NSObject {
     return nil;
   }
   
+  /**
+   Class name
+   
+   - returns: String of current class name.
+   */
   public class func nl_typeName() -> String {
     return "\(self)"
   }

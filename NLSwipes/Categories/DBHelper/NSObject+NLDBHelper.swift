@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+// MARK: - Database interface.
 public extension NSObject {
   public var db_rowId: Int? {
     get {
