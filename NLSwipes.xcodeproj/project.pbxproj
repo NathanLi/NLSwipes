@@ -14,6 +14,7 @@
 		5A4144EB1C318ACD0049B87E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A4144E91C318ACD0049B87E /* LaunchScreen.storyboard */; };
 		5A4144F91C318AFF0049B87E /* NLSwipesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4144F81C318AFF0049B87E /* NLSwipesTests.swift */; };
 		5A546CB71C342FD100B945F1 /* NLTagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A546CB61C342FD100B945F1 /* NLTagModel.swift */; };
+		5A6D88391C80B3A5007752E0 /* NSObject+NLDBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6D88381C80B3A5007752E0 /* NSObject+NLDBHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		5A4144F81C318AFF0049B87E /* NLSwipesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLSwipesTests.swift; sourceTree = "<group>"; };
 		5A4144FA1C318AFF0049B87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A546CB61C342FD100B945F1 /* NLTagModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLTagModel.swift; sourceTree = "<group>"; };
+		5A6D88381C80B3A5007752E0 /* NSObject+NLDBHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+NLDBHelper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		5A21438D1C3EC4D600008DB8 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				5A6D88371C80B37C007752E0 /* DBHelper */,
 				5A21438E1C3EC4E700008DB8 /* NSObject */,
 			);
 			path = Categories;
@@ -121,6 +124,14 @@
 				5A546CB61C342FD100B945F1 /* NLTagModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5A6D88371C80B37C007752E0 /* DBHelper */ = {
+			isa = PBXGroup;
+			children = (
+				5A6D88381C80B3A5007752E0 /* NSObject+NLDBHelper.swift */,
+			);
+			path = DBHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +237,7 @@
 				5A4144E31C318ACD0049B87E /* ViewController.swift in Sources */,
 				5A2143901C3EC5E400008DB8 /* NSObject+nl_Reflectable.swift in Sources */,
 				5A546CB71C342FD100B945F1 /* NLTagModel.swift in Sources */,
+				5A6D88391C80B3A5007752E0 /* NSObject+NLDBHelper.swift in Sources */,
 				5A4144E11C318ACD0049B87E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

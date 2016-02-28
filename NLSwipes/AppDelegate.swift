@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       let a = NLTagModel.nl_typeNameWithPropertyName(name)
       print(a!)
     }
+    
+    print(NLTagModel.db_tableName())
     return true
   }
 

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import ObjectiveC
 
 public typealias NLPropertyInfo = (name: String, typeName: String)
 public extension NSObject {
