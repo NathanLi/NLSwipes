@@ -21,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     print(NLTagModel.db_tableName())
+    
+    let tagModel = NLTagModel()
+    print(tagModel.nl_toDictionary(true))
     return true
   }
 

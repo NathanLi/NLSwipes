@@ -8,8 +8,40 @@
 
 import Foundation
 
+
+public protocol NLToDictionary {}
+public extension NLToDictionary  {
+  public func nl_toDictionary(containParent: Bool) -> [String: Any] {
+    return __nl_toDictionaryWith(Mirror(reflecting: self), containParent: containParent)
+  }
+  
+  private func __nl_toDictionaryWith(mirror: Mirror, containParent: Bool) -> [String: Any] {
+    var result = [String: Any]()
+    mirror.children.filter {
+      $0.label != nil
+      }.forEach {
+        result[$0!] = $1
+    }
+    
+    if containParent && mirror.superclassMirror() != nil {
+      let superMirror = mirror.superclassMirror()
+      let superDictionary = __nl_toDictionaryWith(superMirror!, containParent: true)
+      superDictionary.forEach {
+        result[$0] = $1
+      }
+    }
+    
+    return result
+  }
+
+}
+
 /// Class property information. Include the property name and it's type name.
 public typealias NLPropertyInfo = (name: String, typeName: String)
+
+extension NSObject: NLToDictionary {
+  
+}
 
 // MARK: - The property informas.
 public extension NSObject {
@@ -72,7 +104,6 @@ public extension NSObject {
   public class func nl_typeName() -> String {
     return "\(self)"
   }
-  
   
   private class func __nl_propertyInfos(mirror: Mirror) -> [NLPropertyInfo] {
     var variableInfos = mirror.children.filter { $0.label != nil }.map { NLPropertyInfo($0.label!, "\($0.value.dynamicType)") }
