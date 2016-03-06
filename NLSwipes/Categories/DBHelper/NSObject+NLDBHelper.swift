@@ -56,7 +56,26 @@ public extension NSObject {
     return "\(self)"
   }
   
+  /**
+   The model's table primary key.
+   
+   - returns: Primary key name. Default is `rowid`, override to change it.
+   */
+  public static func db_primaryKey() -> String {
+    return "rowid"
+  }
   
+  public static func db_search(options: [String:Any]?) -> [AnyObject]? {
+    return nil
+  }
+  
+  public static func db_searchSingle(option: [String:Any]?) -> AnyObject? {
+    return nil
+  }
+  
+  public static func db_execute(sql: String) -> Any? {
+    return nil
+  }
 }
 
 
