@@ -76,6 +76,26 @@ public extension NSObject {
   public static func db_execute(sql: String) -> Any? {
     return nil
   }
+  
+  public static func db_createTableSql() -> String? {
+    return nil
+  }
+  
+  func db_updateSql() -> String? {
+    return nil
+  }
+  
+  func db_insertSql() -> String? {
+    return nil
+  }
+  
+  func db_deleteSql() -> String? {
+    return nil
+  }
+  
+  func db_saveSql() -> String? {
+    return nil
+  }
 }
 
 
