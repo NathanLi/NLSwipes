@@ -13,6 +13,7 @@
 		5A4144E81C318ACD0049B87E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A4144E71C318ACD0049B87E /* Assets.xcassets */; };
 		5A4144EB1C318ACD0049B87E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A4144E91C318ACD0049B87E /* LaunchScreen.storyboard */; };
 		5A4144F91C318AFF0049B87E /* NLSwipesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4144F81C318AFF0049B87E /* NLSwipesTests.swift */; };
+		5A441EE61C90831100786EEF /* NLDBHelperUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A441EE51C90831100786EEF /* NLDBHelperUtil.swift */; };
 		5A546CB71C342FD100B945F1 /* NLTagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A546CB61C342FD100B945F1 /* NLTagModel.swift */; };
 		5A6D88391C80B3A5007752E0 /* NSObject+NLDBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6D88381C80B3A5007752E0 /* NSObject+NLDBHelper.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		5A4144F61C318AFF0049B87E /* NLSwipesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NLSwipesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A4144F81C318AFF0049B87E /* NLSwipesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLSwipesTests.swift; sourceTree = "<group>"; };
 		5A4144FA1C318AFF0049B87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A441EE51C90831100786EEF /* NLDBHelperUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLDBHelperUtil.swift; sourceTree = "<group>"; };
 		5A546CB61C342FD100B945F1 /* NLTagModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLTagModel.swift; sourceTree = "<group>"; };
 		5A6D88381C80B3A5007752E0 /* NSObject+NLDBHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+NLDBHelper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				5A6D88381C80B3A5007752E0 /* NSObject+NLDBHelper.swift */,
+				5A441EE51C90831100786EEF /* NLDBHelperUtil.swift */,
 			);
 			path = DBHelper;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				5A546CB71C342FD100B945F1 /* NLTagModel.swift in Sources */,
 				5A6D88391C80B3A5007752E0 /* NSObject+NLDBHelper.swift in Sources */,
 				5A4144E11C318ACD0049B87E /* AppDelegate.swift in Sources */,
+				5A441EE61C90831100786EEF /* NLDBHelperUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
